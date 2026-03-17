@@ -25,18 +25,25 @@
         </div>
       </div>
 
+      <input type="checkbox" id="notice-toggle" class="notice-check" />
+
+      <label for="notice-toggle" class="kakao-notice">
+        <img src="kakao_icon.png" class="notice-icon" alt="카톡" />
+        <div class="notice-text">
+          <p class="notice-sender">카카오톡</p>
+          <p class="notice-msg">📧 chn384012@naver.com / 📞 010-8779-3840</p>
+        </div>
+      </label>
+
       <div class="profile-actions">
-        <div
-          class="action-item"
-          onclick="location.href = 'mailto:chn384012@gmail.com'"
-        >
-          <img src="email.svg" alt="채팅" />
-          <span>이메일</span>
-        </div>
-        <div class="action-item" onclick="location.href = 'tel:010-8779-3840'">
+        <label for="notice-toggle" class="action-item">
+          <img src="email.svg" alt="이메일" />
+          <span>정보 확인</span>
+        </label>
+        <label for="notice-toggle" class="action-item">
           <img src="phone.svg" alt="통화" />
-          <span>통화</span>
-        </div>
+          <span>연락처 보기</span>
+        </label>
       </div>
 
       <div class="feed-container">
