@@ -43,7 +43,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-75%, -50%) rotate(0deg); /* 기울임 정도 */
+  transform: translate(-70%, -50%) rotate(0deg); /* 기울임 정도 */
   filter: blur(0px) brightness(0.5px); /* 흐림 정도 */
   opacity: 0.5; /* 투명도 */
   z-index: 1; /* 카드보다 뒤로 보냄 */
