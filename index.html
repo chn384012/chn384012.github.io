@@ -25,24 +25,33 @@
         </div>
       </div>
 
-      <input type="checkbox" id="notice-toggle" class="notice-check" />
-
-      <label for="notice-toggle" class="kakao-notice">
+      <input type="checkbox" id="email-toggle" class="notice-check" />
+      <label for="email-toggle" class="kakao-notice email-box">
         <img src="kakao_icon.png" class="notice-icon" alt="카톡" />
         <div class="notice-text">
-          <p class="notice-sender">카카오톡</p>
-          <p class="notice-msg">📧 chn384012@naver.com / 📞 010-8779-3840</p>
+          <p class="notice-sender">카카오톡 (이메일)</p>
+          <p class="notice-msg">📧 chn384012@naver.com</p>
+        </div>
+      </label>
+
+      <input type="checkbox" id="phone-toggle" class="notice-check" />
+      <label for="phone-toggle" class="kakao-notice phone-box">
+        <img src="kakao_icon.png" class="notice-icon" alt="카톡" />
+        <div class="notice-text">
+          <p class="notice-sender">카카오톡 (연락처)</p>
+          <p class="notice-msg">📞 010-8779-3840</p>
         </div>
       </label>
 
       <div class="profile-actions">
-        <label for="notice-toggle" class="action-item">
+        <label for="email-toggle" class="action-item">
           <img src="email.svg" alt="이메일" />
-          <span>정보 확인</span>
+          <span>이메일</span>
         </label>
-        <label for="notice-toggle" class="action-item">
+
+        <label for="phone-toggle" class="action-item">
           <img src="phone.svg" alt="통화" />
-          <span>연락처 보기</span>
+          <span>연락처</span>
         </label>
       </div>
 
@@ -106,11 +115,23 @@
             <div class="modal-box">
               <h3>Playlist🎧</h3>
               <p>봄에 듣기 좋은 노래들 추천합니다🌸</p>
-              <img
-                src="playlist.jpg"
-                class="full-playlist-img"
-                alt="플레이리스트 사진"
-              />
+
+              <a
+                href="https://music.apple.com/kr/playlist/b/pl.u-oZyl32WCR4VN2ey"
+                target="_blank"
+                title="애플뮤직에서 듣기"
+              >
+                <img
+                  src="playlist.jpg"
+                  class="full-playlist-img"
+                  alt="플레이리스트 사진"
+                />
+              </a>
+
+              <p style="font-size: 12px; color: #888; margin-top: 10px">
+                이미지를 클릭하면 애플뮤직으로 이동합니다.<br />더 많은 곡들이
+                궁금하시다면 클릭!!
+              </p>
               <label for="modal-play" class="close-btn">닫기</label>
             </div>
           </div>

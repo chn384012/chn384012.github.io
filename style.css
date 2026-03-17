@@ -58,7 +58,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: -220px;
+  margin-top: -190px;
   padding: 0 25px 20px 25px;
 }
 
@@ -95,34 +95,53 @@ body {
   margin: 30px 0;
 }
 
-/* 체크박스는 화면에서 숨김*/
-.notice-check {
-  display: none;
-}
-
-/* 알림창 기본 스타일 (평소엔 카드 위로 숨김) */
+/* 공통 알림창 스타일 (기존과 동일) */
 .kakao-notice {
   position: absolute;
-  top: -80px; /* 카드 밖으로 올림 */
+  top: -80px;
   left: 15px;
   right: 15px;
   height: 65px;
-  background-color: rgba(255, 255, 255, 0.98);
+  background-color: white;
   border-radius: 18px;
   display: flex;
   align-items: center;
   padding: 0 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   z-index: 9999;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 튕기는 느낌 추가 */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
+  overflow: hidden;
 }
 
-/* 체크박스가 체크되면 알림창 아래로 */
-.notice-check:checked + .kakao-notice {
+/* 각각의 체크박스에 반응 */
+#email-toggle:checked ~ .email-box {
   top: 15px;
 }
 
+#phone-toggle:checked ~ .phone-box {
+  top: 15px;
+}
+
+/* 체크박스 숨기기 */
+.notice-check {
+  display: none;
+}
+.notice-icon {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  object-fit: contain; /* 이미지 비율 유지 */
+  margin-right: 12px;
+  border-radius: 8px;
+}
+
+/* 알림창 텍스트 중앙 정렬 확인 */
+.notice-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 /* 알림창 내부 텍스트 스타일 */
 .notice-sender {
   font-size: 12px;
@@ -286,6 +305,15 @@ body {
   margin: 15px 0; /* 제목과 닫기 버튼 사이 여백 */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: block;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.full-playlist-img:hover {
+  transform: scale(1.02);
+  opacity: 0.9; /* 투명해짐 */
 }
 
 /* 팝업 박스 자체도 사진이 길면 같이 길어지도록 설정 */
